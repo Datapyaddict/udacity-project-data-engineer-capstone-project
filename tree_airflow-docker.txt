@@ -1,0 +1,59 @@
+airflow-docker
+├── Dockerfile
+├── config
+│   ├── __init__.py
+│   ├── airflow.cfg
+│   ├── api_data_quality_ctrl.py
+│   ├── common_modules.py
+│   ├── constituents.csv
+│   ├── datalake_quality_ctrl.py
+│   ├── dl_config.cfg
+│   ├── get_stocksymbol_data.py
+│   ├── get_tickers_actions.py
+│   ├── get_tickers_analysis.py
+│   ├── get_tickers_balancesheet.py
+│   ├── get_tickers_cashflow.py
+│   ├── get_tickers_earnings.py
+│   ├── get_tickers_earnings_dates.py
+│   ├── get_tickers_financials.py
+│   ├── get_tickers_historical_prices.py
+│   ├── get_tickers_holders.py
+│   ├── get_tickers_info.py
+│   ├── get_tickers_isin.py
+│   ├── get_tickers_major_holders.py
+│   ├── get_tickers_news.py
+│   ├── get_tickers_options.py
+│   ├── get_tickers_recommendations.py
+│   ├── get_tickers_shares.py
+│   ├── get_tickers_tweets.py
+│   ├── put_exchanges_dim.py
+│   ├── put_market_dim.py
+│   ├── put_tickers_actions_dim.py
+│   ├── put_tickers_analysis_dim.py
+│   ├── put_tickers_balancesheet_dim.py
+│   ├── put_tickers_cashflow_dim.py
+│   ├── put_tickers_earnings_dim.py
+│   ├── put_tickers_eps_dim.py
+│   ├── put_tickers_financials_dim.py
+│   ├── put_tickers_historical_prices_dim.py
+│   ├── put_tickers_holders_dim.py
+│   ├── put_tickers_info_dim.py
+│   ├── put_tickers_news_dim.py
+│   ├── put_tickers_options_dim.py
+│   ├── put_tickers_recommendations_dim.py
+│   ├── put_tickers_shares_dim.py
+│   └── put_tickers_tweets_dim.py
+├── dags
+│   ├── __init__.py
+│   └── market_data_analytics
+│       ├── __init__.py
+│       ├── common_packages
+│       │   ├── __init__.py
+│       │   └── empty_s3_folder.py
+│       └── my_dags
+│           ├── __init__.py
+│           ├── datalake_update.py
+│           ├── empty_data_lake.py
+│           └── import_data_from_apis.py
+├── docker-compose.yaml
+├── logs

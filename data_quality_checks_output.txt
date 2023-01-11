@@ -1,0 +1,140 @@
+create spark session
+
+table : financial_report_dim
+primary keys : ['reporting_id']
+count : 30 ; duplicates :  0
+
+table : hashtags_dim
+primary keys : ['hashtag_id', 'tweet_id', 'hashtag']
+count : 19362 ; duplicates :  0
+
+table : holders_dim
+primary keys : ['holder', 'holder_type']
+count : 31 ; duplicates :  0
+
+table : location_dim
+primary keys : ['zip']
+count : 2 ; duplicates :  0
+
+table : news_dim
+primary keys : ['uuid']
+count : 27 ; duplicates :  0
+
+table : sector_dim
+primary keys : ['industry']
+count : 2 ; duplicates :  0
+
+table : tickers_news_fact
+primary keys : ['uuid', 'ticker']
+count : 27 ; duplicates :  0
+
+table : tickers_actions_fact
+primary keys : ['id']
+count : 0 ; duplicates :  0
+
+table : tickers_analysis_fact
+primary keys : ['ticker', 'period']
+count : 12 ; duplicates :  0
+
+table : tickers_balancesheet_fact
+primary keys : ['reporting_id']
+count : 14 ; duplicates :  0
+
+table : tickers_cashflow_fact
+primary keys : ['reporting_id']
+count : 14 ; duplicates :  0
+
+table : tickers_earnings_fact
+primary keys : ['reporting_id']
+count : 16 ; duplicates :  0
+
+table : tickers_eps_fact
+primary keys : ['id']
+count : 25 ; duplicates :  0
+
+table : tickers_financials_fact
+primary keys : ['reporting_id']
+count : 14 ; duplicates :  0
+
+table : tickers_historical_prices_fact
+primary keys : ['ticker', 'date', 'datetime', 'interval']
+count : 27850 ; duplicates :  0
+
+table : tickers_holders_fact
+primary keys : ['ticker', 'holder']
+count : 40 ; duplicates :  0
+
+table : tickers_info_dim
+primary keys : ['ticker']
+count : 2 ; duplicates :  0
+
+table : tickers_options_fact
+primary keys : ['contract_symbol']
+count : 69 ; duplicates :  0
+
+table : tickers_recommendations_fact
+primary keys : ['ticker', 'firm', 'date']
+count : 315 ; duplicates :  0
+
+table : exchanges_dim
+primary keys : ['exchange']
+count : 71 ; duplicates :  0
+
+table : markets_dim
+primary keys : ['market']
+count : 31 ; duplicates :  0
+
+table : market_indexes_dim
+primary keys : ['index_id', 'market']
+count : 111 ; duplicates :  0
+
+table : tickers_shares_fact
+primary keys : ['reporting_id']
+count : 6 ; duplicates :  0
+
+table : tickers_tweets_users_fact
+primary keys : ['ticker', 'user_id', 'tweet_id']
+count : 2065 ; duplicates :  0
+
+table : tweets_dim
+primary keys : ['tweet_id']
+count : 2065 ; duplicates :  0
+
+table : user_id_dim
+primary keys : ['user_id']
+count : 1092 ; duplicates :  0
+                dimensional_table  ... duplicates : 
+0            financial_report_dim  ...           0.0
+0                    hashtags_dim  ...           0.0
+0                     holders_dim  ...           0.0
+0                    location_dim  ...           0.0
+0                        news_dim  ...           0.0
+0                      sector_dim  ...           0.0
+0               tickers_news_fact  ...           0.0
+0            tickers_actions_fact  ...           0.0
+0           tickers_analysis_fact  ...           0.0
+0       tickers_balancesheet_fact  ...           0.0
+0           tickers_cashflow_fact  ...           0.0
+0           tickers_earnings_fact  ...           0.0
+0                tickers_eps_fact  ...           0.0
+0         tickers_financials_fact  ...           0.0
+0  tickers_historical_prices_fact  ...           0.0
+0            tickers_holders_fact  ...           0.0
+0                tickers_info_dim  ...           0.0
+0            tickers_options_fact  ...           0.0
+0    tickers_recommendations_fact  ...           0.0
+0                   exchanges_dim  ...           0.0
+0                     markets_dim  ...           0.0
+0              market_indexes_dim  ...           0.0
+0             tickers_shares_fact  ...           0.0
+0       tickers_tweets_users_fact  ...           0.0
+0                      tweets_dim  ...           0.0
+0                     user_id_dim  ...           0.0
+
+[26 rows x 6 columns]
+Traceback (most recent call last):
+  File "/home/hadoop/datalake_quality_ctrl.py", line 91, in <module>
+    main()
+  File "/home/hadoop/datalake_quality_ctrl.py", line 83, in main
+    raise AssertionError('at least one table has no entries')
+AssertionError: at least one table has no entries

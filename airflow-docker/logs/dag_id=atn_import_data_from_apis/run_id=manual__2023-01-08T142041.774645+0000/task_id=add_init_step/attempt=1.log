@@ -1,0 +1,26 @@
+[2023-01-08T14:21:56.663+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: atn_import_data_from_apis.add_init_step manual__2023-01-08T14:20:41.774645+00:00 [queued]>
+[2023-01-08T14:21:56.730+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: atn_import_data_from_apis.add_init_step manual__2023-01-08T14:20:41.774645+00:00 [queued]>
+[2023-01-08T14:21:56.731+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-08T14:21:56.731+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 3
+[2023-01-08T14:21:56.732+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-08T14:21:56.769+0000] {taskinstance.py:1389} INFO - Executing <Task(EmrAddStepsOperator): add_init_step> on 2023-01-08 14:20:41.774645+00:00
+[2023-01-08T14:21:56.778+0000] {standard_task_runner.py:52} INFO - Started process 160 to run task
+[2023-01-08T14:21:56.785+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'atn_import_data_from_apis', 'add_init_step', 'manual__2023-01-08T14:20:41.774645+00:00', '--job-id', '3989', '--raw', '--subdir', 'DAGS_FOLDER/market_data_analytics/my_dags/import_data_from_apis.py', '--cfg-path', '/tmp/tmptbkcpdiw', '--error-file', '/tmp/tmp5d_7jg6o']
+[2023-01-08T14:21:56.786+0000] {standard_task_runner.py:80} INFO - Job 3989: Subtask add_init_step
+[2023-01-08T14:21:56.917+0000] {task_command.py:371} INFO - Running <TaskInstance: atn_import_data_from_apis.add_init_step manual__2023-01-08T14:20:41.774645+00:00 [running]> on host 370ed6868bc3
+[2023-01-08T14:21:57.191+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=atn
+AIRFLOW_CTX_DAG_ID=atn_import_data_from_apis
+AIRFLOW_CTX_TASK_ID=add_init_step
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-08T14:20:41.774645+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-08T14:20:41.774645+00:00
+[2023-01-08T14:21:57.215+0000] {base.py:68} INFO - Using connection ID 'aws_credentials' for task execution.
+[2023-01-08T14:21:57.216+0000] {connection_wrapper.py:210} INFO - AWS Connection (conn_id='aws_credentials', conn_type='aws') credentials retrieved from login and password.
+[2023-01-08T14:21:57.328+0000] {emr.py:104} INFO - Adding steps to j-9LEVRHTCP62
+[2023-01-08T14:21:58.452+0000] {emr.py:117} INFO - Steps ['s-16OOHZGYC191N', 's-3KII04NK21K5A', 's-XUSCKE4TI1S8', 's-UFIRDA82AR6T', 's-276674ACBN667', 's-6IQA3VATOFFX', 's-26U6MNU44SLO3', 's-3UJ87NKI6S0WW', 's-2GFOWOFIDTRGQ', 's-1YFXTMASBYYGY'] added to JobFlow
+[2023-01-08T14:21:58.570+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=atn_import_data_from_apis, task_id=add_init_step, execution_date=20230108T142041, start_date=20230108T142156, end_date=20230108T142158
+[2023-01-08T14:21:58.634+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-01-08T14:21:58.726+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,24 @@
+[2023-01-05T10:56:52.569+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: atn_update_datalake.upload_put_tickers_shares_to_s3 manual__2023-01-05T10:56:03.364986+00:00 [queued]>
+[2023-01-05T10:56:52.581+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: atn_update_datalake.upload_put_tickers_shares_to_s3 manual__2023-01-05T10:56:03.364986+00:00 [queued]>
+[2023-01-05T10:56:52.581+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-05T10:56:52.581+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 3
+[2023-01-05T10:56:52.581+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-05T10:56:52.601+0000] {taskinstance.py:1389} INFO - Executing <Task(LocalFilesystemToS3Operator): upload_put_tickers_shares_to_s3> on 2023-01-05 10:56:03.364986+00:00
+[2023-01-05T10:56:52.607+0000] {standard_task_runner.py:52} INFO - Started process 310 to run task
+[2023-01-05T10:56:52.611+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'atn_update_datalake', 'upload_put_tickers_shares_to_s3', 'manual__2023-01-05T10:56:03.364986+00:00', '--job-id', '3762', '--raw', '--subdir', 'DAGS_FOLDER/market_data_analytics/my_dags/datalake_update.py', '--cfg-path', '/tmp/tmpj5ephfbd', '--error-file', '/tmp/tmpkn4x5w37']
+[2023-01-05T10:56:52.612+0000] {standard_task_runner.py:80} INFO - Job 3762: Subtask upload_put_tickers_shares_to_s3
+[2023-01-05T10:56:52.684+0000] {task_command.py:371} INFO - Running <TaskInstance: atn_update_datalake.upload_put_tickers_shares_to_s3 manual__2023-01-05T10:56:03.364986+00:00 [running]> on host 370ed6868bc3
+[2023-01-05T10:56:52.767+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=atn
+AIRFLOW_CTX_DAG_ID=atn_update_datalake
+AIRFLOW_CTX_TASK_ID=upload_put_tickers_shares_to_s3
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-05T10:56:03.364986+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-05T10:56:03.364986+00:00
+[2023-01-05T10:56:52.779+0000] {base.py:68} INFO - Using connection ID 'aws_credentials' for task execution.
+[2023-01-05T10:56:52.780+0000] {connection_wrapper.py:210} INFO - AWS Connection (conn_id='aws_credentials', conn_type='aws') credentials retrieved from login and password.
+[2023-01-05T10:56:54.094+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=atn_update_datalake, task_id=upload_put_tickers_shares_to_s3, execution_date=20230105T105603, start_date=20230105T105652, end_date=20230105T105654
+[2023-01-05T10:56:54.152+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-01-05T10:56:54.239+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check

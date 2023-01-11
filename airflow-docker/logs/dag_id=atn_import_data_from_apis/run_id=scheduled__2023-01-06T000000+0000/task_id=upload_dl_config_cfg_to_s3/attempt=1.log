@@ -1,0 +1,54 @@
+[2023-01-06T12:28:56.737+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: atn_import_data_from_apis.upload_dl_config_cfg_to_s3 scheduled__2023-01-06T00:00:00+00:00 [queued]>
+[2023-01-06T12:28:56.746+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: atn_import_data_from_apis.upload_dl_config_cfg_to_s3 scheduled__2023-01-06T00:00:00+00:00 [queued]>
+[2023-01-06T12:28:56.747+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-06T12:28:56.747+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 3
+[2023-01-06T12:28:56.747+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-06T12:28:56.759+0000] {taskinstance.py:1389} INFO - Executing <Task(LocalFilesystemToS3Operator): upload_dl_config_cfg_to_s3> on 2023-01-06 00:00:00+00:00
+[2023-01-06T12:28:56.763+0000] {standard_task_runner.py:52} INFO - Started process 68 to run task
+[2023-01-06T12:28:56.766+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'atn_import_data_from_apis', 'upload_dl_config_cfg_to_s3', 'scheduled__2023-01-06T00:00:00+00:00', '--job-id', '3815', '--raw', '--subdir', 'DAGS_FOLDER/market_data_analytics/my_dags/import_data_from_apis.py', '--cfg-path', '/tmp/tmp5yf47knb', '--error-file', '/tmp/tmplgu1vc43']
+[2023-01-06T12:28:56.767+0000] {standard_task_runner.py:80} INFO - Job 3815: Subtask upload_dl_config_cfg_to_s3
+[2023-01-06T12:28:56.779+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:538: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-01-06T12:28:56.827+0000] {task_command.py:371} INFO - Running <TaskInstance: atn_import_data_from_apis.upload_dl_config_cfg_to_s3 scheduled__2023-01-06T00:00:00+00:00 [running]> on host 370ed6868bc3
+[2023-01-06T12:28:56.903+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=atn
+AIRFLOW_CTX_DAG_ID=atn_import_data_from_apis
+AIRFLOW_CTX_TASK_ID=upload_dl_config_cfg_to_s3
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-06T00:00:00+00:00
+[2023-01-06T12:28:56.914+0000] {base.py:68} INFO - Using connection ID 'aws_credentials' for task execution.
+[2023-01-06T12:28:56.915+0000] {connection_wrapper.py:210} INFO - AWS Connection (conn_id='aws_credentials', conn_type='aws') credentials retrieved from login and password.
+[2023-01-06T12:28:58.971+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=atn_import_data_from_apis, task_id=upload_dl_config_cfg_to_s3, execution_date=20230106T000000, start_date=20230106T122856, end_date=20230106T122858
+[2023-01-06T12:28:58.993+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-01-06T12:28:59.095+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check
+[2023-01-06T12:33:02.107+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: atn_import_data_from_apis.upload_dl_config_cfg_to_s3 scheduled__2023-01-06T00:00:00+00:00 [queued]>
+[2023-01-06T12:33:02.120+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: atn_import_data_from_apis.upload_dl_config_cfg_to_s3 scheduled__2023-01-06T00:00:00+00:00 [queued]>
+[2023-01-06T12:33:02.120+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-06T12:33:02.120+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 3
+[2023-01-06T12:33:02.120+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-06T12:33:02.135+0000] {taskinstance.py:1389} INFO - Executing <Task(LocalFilesystemToS3Operator): upload_dl_config_cfg_to_s3> on 2023-01-06 00:00:00+00:00
+[2023-01-06T12:33:02.140+0000] {standard_task_runner.py:52} INFO - Started process 110 to run task
+[2023-01-06T12:33:02.143+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'atn_import_data_from_apis', 'upload_dl_config_cfg_to_s3', 'scheduled__2023-01-06T00:00:00+00:00', '--job-id', '3828', '--raw', '--subdir', 'DAGS_FOLDER/market_data_analytics/my_dags/import_data_from_apis.py', '--cfg-path', '/tmp/tmppzz73bzm', '--error-file', '/tmp/tmpu8nq74hk']
+[2023-01-06T12:33:02.144+0000] {standard_task_runner.py:80} INFO - Job 3828: Subtask upload_dl_config_cfg_to_s3
+[2023-01-06T12:33:02.159+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:538: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-01-06T12:33:02.209+0000] {task_command.py:371} INFO - Running <TaskInstance: atn_import_data_from_apis.upload_dl_config_cfg_to_s3 scheduled__2023-01-06T00:00:00+00:00 [running]> on host 370ed6868bc3
+[2023-01-06T12:33:02.286+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=atn
+AIRFLOW_CTX_DAG_ID=atn_import_data_from_apis
+AIRFLOW_CTX_TASK_ID=upload_dl_config_cfg_to_s3
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-06T00:00:00+00:00
+[2023-01-06T12:33:02.300+0000] {base.py:68} INFO - Using connection ID 'aws_credentials' for task execution.
+[2023-01-06T12:33:02.301+0000] {connection_wrapper.py:210} INFO - AWS Connection (conn_id='aws_credentials', conn_type='aws') credentials retrieved from login and password.
+[2023-01-06T12:33:03.807+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=atn_import_data_from_apis, task_id=upload_dl_config_cfg_to_s3, execution_date=20230106T000000, start_date=20230106T123302, end_date=20230106T123303
+[2023-01-06T12:33:03.849+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-01-06T12:33:04.069+0000] {local_task_job.py:279} INFO - 0 downstream tasks scheduled from follow-on schedule check

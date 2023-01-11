@@ -1,0 +1,30 @@
+[2023-01-06T12:34:10.491+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: atn_import_data_from_apis.create_emr scheduled__2023-01-06T00:00:00+00:00 [queued]>
+[2023-01-06T12:34:10.505+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: atn_import_data_from_apis.create_emr scheduled__2023-01-06T00:00:00+00:00 [queued]>
+[2023-01-06T12:34:10.506+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-06T12:34:10.506+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 3
+[2023-01-06T12:34:10.506+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-06T12:34:10.521+0000] {taskinstance.py:1389} INFO - Executing <Task(EmrCreateJobFlowOperator): create_emr> on 2023-01-06 00:00:00+00:00
+[2023-01-06T12:34:10.526+0000] {standard_task_runner.py:52} INFO - Started process 202 to run task
+[2023-01-06T12:34:10.529+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'atn_import_data_from_apis', 'create_emr', 'scheduled__2023-01-06T00:00:00+00:00', '--job-id', '3851', '--raw', '--subdir', 'DAGS_FOLDER/market_data_analytics/my_dags/import_data_from_apis.py', '--cfg-path', '/tmp/tmpmsmsd8fe', '--error-file', '/tmp/tmpl44wm4w8']
+[2023-01-06T12:34:10.530+0000] {standard_task_runner.py:80} INFO - Job 3851: Subtask create_emr
+[2023-01-06T12:34:10.545+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:538: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-01-06T12:34:10.596+0000] {task_command.py:371} INFO - Running <TaskInstance: atn_import_data_from_apis.create_emr scheduled__2023-01-06T00:00:00+00:00 [running]> on host 370ed6868bc3
+[2023-01-06T12:34:10.673+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=atn
+AIRFLOW_CTX_DAG_ID=atn_import_data_from_apis
+AIRFLOW_CTX_TASK_ID=create_emr
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-06T00:00:00+00:00
+[2023-01-06T12:34:10.674+0000] {emr.py:297} INFO - Creating JobFlow using aws-conn-id: aws_credentials, emr-conn-id: aws_credentials
+[2023-01-06T12:34:10.686+0000] {base.py:68} INFO - Using connection ID 'aws_credentials' for task execution.
+[2023-01-06T12:34:10.693+0000] {base.py:68} INFO - Using connection ID 'aws_credentials' for task execution.
+[2023-01-06T12:34:10.694+0000] {connection_wrapper.py:210} INFO - AWS Connection (conn_id='aws_credentials', conn_type='aws') credentials retrieved from login and password.
+[2023-01-06T12:34:11.960+0000] {emr.py:311} INFO - JobFlow with id j-3J07UP5RPSGPC created
+[2023-01-06T12:34:12.053+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=atn_import_data_from_apis, task_id=create_emr, execution_date=20230106T000000, start_date=20230106T123410, end_date=20230106T123412
+[2023-01-06T12:34:12.076+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-01-06T12:34:12.139+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,34 @@
+[2023-01-06T13:07:14.485+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: atn_import_data_from_apis.check_get_tickers_shares_step scheduled__2023-01-06T00:00:00+00:00 [queued]>
+[2023-01-06T13:07:14.501+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: atn_import_data_from_apis.check_get_tickers_shares_step scheduled__2023-01-06T00:00:00+00:00 [queued]>
+[2023-01-06T13:07:14.501+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-06T13:07:14.501+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 3
+[2023-01-06T13:07:14.501+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-06T13:07:14.516+0000] {taskinstance.py:1389} INFO - Executing <Task(EmrStepSensor): check_get_tickers_shares_step> on 2023-01-06 00:00:00+00:00
+[2023-01-06T13:07:14.521+0000] {standard_task_runner.py:52} INFO - Started process 264 to run task
+[2023-01-06T13:07:14.525+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'atn_import_data_from_apis', 'check_get_tickers_shares_step', 'scheduled__2023-01-06T00:00:00+00:00', '--job-id', '3882', '--raw', '--subdir', 'DAGS_FOLDER/market_data_analytics/my_dags/import_data_from_apis.py', '--cfg-path', '/tmp/tmpnq266d38', '--error-file', '/tmp/tmpfvd88uvl']
+[2023-01-06T13:07:14.525+0000] {standard_task_runner.py:80} INFO - Job 3882: Subtask check_get_tickers_shares_step
+[2023-01-06T13:07:14.539+0000] {warnings.py:110} WARNING - /home/***/.local/lib/python3.7/site-packages/***/configuration.py:538: DeprecationWarning: The sql_alchemy_conn option in [core] has been moved to the sql_alchemy_conn option in [database] - the old setting has been used, but please update your config.
+  option = self._get_environment_variables(deprecated_key, deprecated_section, key, section)
+
+[2023-01-06T13:07:14.591+0000] {task_command.py:371} INFO - Running <TaskInstance: atn_import_data_from_apis.check_get_tickers_shares_step scheduled__2023-01-06T00:00:00+00:00 [running]> on host 370ed6868bc3
+[2023-01-06T13:07:14.692+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=atn
+AIRFLOW_CTX_DAG_ID=atn_import_data_from_apis
+AIRFLOW_CTX_TASK_ID=check_get_tickers_shares_step
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-06T00:00:00+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=scheduled__2023-01-06T00:00:00+00:00
+[2023-01-06T13:07:14.706+0000] {base.py:68} INFO - Using connection ID 'aws_credentials' for task execution.
+[2023-01-06T13:07:14.707+0000] {connection_wrapper.py:210} INFO - AWS Connection (conn_id='aws_credentials', conn_type='aws') credentials retrieved from login and password.
+[2023-01-06T13:07:14.747+0000] {emr.py:443} INFO - Poking step s-2YNBI1EXL92XB on cluster j-3J07UP5RPSGPC
+[2023-01-06T13:07:15.980+0000] {emr.py:69} INFO - Job flow currently PENDING
+[2023-01-06T13:08:16.041+0000] {emr.py:443} INFO - Poking step s-2YNBI1EXL92XB on cluster j-3J07UP5RPSGPC
+[2023-01-06T13:08:17.429+0000] {emr.py:69} INFO - Job flow currently RUNNING
+[2023-01-06T13:09:17.491+0000] {emr.py:443} INFO - Poking step s-2YNBI1EXL92XB on cluster j-3J07UP5RPSGPC
+[2023-01-06T13:09:21.508+0000] {emr.py:69} INFO - Job flow currently COMPLETED
+[2023-01-06T13:09:21.509+0000] {base.py:301} INFO - Success criteria met. Exiting.
+[2023-01-06T13:09:21.520+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=atn_import_data_from_apis, task_id=check_get_tickers_shares_step, execution_date=20230106T000000, start_date=20230106T130714, end_date=20230106T130921
+[2023-01-06T13:09:21.582+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-01-06T13:09:21.632+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,29 @@
+[2023-01-08T14:43:48.791+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: atn_import_data_from_apis.check_get_tickers_earnings_step manual__2023-01-08T14:20:41.774645+00:00 [queued]>
+[2023-01-08T14:43:48.806+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: atn_import_data_from_apis.check_get_tickers_earnings_step manual__2023-01-08T14:20:41.774645+00:00 [queued]>
+[2023-01-08T14:43:48.806+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-08T14:43:48.806+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 3
+[2023-01-08T14:43:48.806+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-08T14:43:48.821+0000] {taskinstance.py:1389} INFO - Executing <Task(EmrStepSensor): check_get_tickers_earnings_step> on 2023-01-08 14:20:41.774645+00:00
+[2023-01-08T14:43:48.826+0000] {standard_task_runner.py:52} INFO - Started process 188 to run task
+[2023-01-08T14:43:48.829+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'atn_import_data_from_apis', 'check_get_tickers_earnings_step', 'manual__2023-01-08T14:20:41.774645+00:00', '--job-id', '4003', '--raw', '--subdir', 'DAGS_FOLDER/market_data_analytics/my_dags/import_data_from_apis.py', '--cfg-path', '/tmp/tmpjx9ckh3l', '--error-file', '/tmp/tmp5kvslc9b']
+[2023-01-08T14:43:48.830+0000] {standard_task_runner.py:80} INFO - Job 4003: Subtask check_get_tickers_earnings_step
+[2023-01-08T14:43:48.896+0000] {task_command.py:371} INFO - Running <TaskInstance: atn_import_data_from_apis.check_get_tickers_earnings_step manual__2023-01-08T14:20:41.774645+00:00 [running]> on host 370ed6868bc3
+[2023-01-08T14:43:49.008+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=atn
+AIRFLOW_CTX_DAG_ID=atn_import_data_from_apis
+AIRFLOW_CTX_TASK_ID=check_get_tickers_earnings_step
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-08T14:20:41.774645+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-08T14:20:41.774645+00:00
+[2023-01-08T14:43:49.022+0000] {base.py:68} INFO - Using connection ID 'aws_credentials' for task execution.
+[2023-01-08T14:43:49.023+0000] {connection_wrapper.py:210} INFO - AWS Connection (conn_id='aws_credentials', conn_type='aws') credentials retrieved from login and password.
+[2023-01-08T14:43:49.069+0000] {emr.py:443} INFO - Poking step s-3TJJTDHSAV6KK on cluster j-9LEVRHTCP62
+[2023-01-08T14:43:49.858+0000] {emr.py:69} INFO - Job flow currently PENDING
+[2023-01-08T14:44:49.865+0000] {emr.py:443} INFO - Poking step s-3TJJTDHSAV6KK on cluster j-9LEVRHTCP62
+[2023-01-08T14:44:50.589+0000] {emr.py:69} INFO - Job flow currently COMPLETED
+[2023-01-08T14:44:50.589+0000] {base.py:301} INFO - Success criteria met. Exiting.
+[2023-01-08T14:44:50.610+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=atn_import_data_from_apis, task_id=check_get_tickers_earnings_step, execution_date=20230108T142041, start_date=20230108T144348, end_date=20230108T144450
+[2023-01-08T14:44:50.665+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-01-08T14:44:50.734+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check

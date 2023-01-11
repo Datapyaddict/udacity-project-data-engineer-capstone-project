@@ -1,0 +1,44 @@
+create spark session
+folder path :  markets_static_data/tickers_historical_prices/tickers_historical_prices.parquet ; count : 24296
+folder path :  markets_static_data/tickers_info/tickers_info.parquet ; count : 2
+folder path :  markets_static_data/tickers_isin/tickers_isin.parquet ; count : 2
+folder path :  markets_static_data/tickers_options/tickers_options.parquet ; count : 39
+folder path :  markets_static_data/market_indexes/markets_indexes.parquet ; count : 48
+folder path :  markets_static_data/tickers_actions/tickers_actions.parquet ; count : 0
+folder path :  markets_static_data/tickers_analysis/tickers_analysis.parquet ; count : 12
+folder path :  markets_static_data/tickers_balancesheet/tickers_balancesheet.parquet ; count : 14
+folder path :  markets_static_data/tickers_cashflow/tickers_cashflow.parquet ; count : 14
+folder path :  markets_static_data/tickers_earnings/tickers_earnings.parquet ; count : 16
+folder path :  markets_static_data/tickers_eps/tickers_eps.parquet ; count : 24
+folder path :  markets_static_data/tickers_financials/tickers_financials.parquet ; count : 14
+folder path :  markets_static_data/tickers_holders/tickers_holders.parquet ; count : 40
+folder path :  markets_static_data/tickers_major_holders/tickers_major_holders.parquet ; count : 2
+folder path :  markets_static_data/tickers_news/tickers_news.parquet ; count : 128
+folder path :  markets_static_data/tickers_recommendations/tickers_recommendations.parquet ; count : 315
+folder path :  markets_static_data/tickers_shares/tickers_shares.parquet ; count : 6
+folder path :  tweets ; count : 39367
+                                         folder_path  count
+0  markets_static_data/tickers_historical_prices/...  24296
+0  markets_static_data/tickers_info/tickers_info....      2
+0  markets_static_data/tickers_isin/tickers_isin....      2
+0  markets_static_data/tickers_options/tickers_op...     39
+0  markets_static_data/market_indexes/markets_ind...     48
+0  markets_static_data/tickers_actions/tickers_ac...      0
+0  markets_static_data/tickers_analysis/tickers_a...     12
+0  markets_static_data/tickers_balancesheet/ticke...     14
+0  markets_static_data/tickers_cashflow/tickers_c...     14
+0  markets_static_data/tickers_earnings/tickers_e...     16
+0  markets_static_data/tickers_eps/tickers_eps.pa...     24
+0  markets_static_data/tickers_financials/tickers...     14
+0  markets_static_data/tickers_holders/tickers_ho...     40
+0  markets_static_data/tickers_major_holders/tick...      2
+0  markets_static_data/tickers_news/tickers_news....    128
+0  markets_static_data/tickers_recommendations/ti...    315
+0  markets_static_data/tickers_shares/tickers_sha...      6
+0                                             tweets  39367
+Traceback (most recent call last):
+  File "/home/hadoop/api_data_quality_ctrl.py", line 79, in <module>
+    main()
+  File "/home/hadoop/api_data_quality_ctrl.py", line 74, in main
+    raise AssertionError('at least one table has no entries')
+AssertionError: at least one table has no entries

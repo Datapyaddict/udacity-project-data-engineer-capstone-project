@@ -1,0 +1,43 @@
+[2023-01-05T12:04:41.969+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: atn_update_datalake.check_put_tickers_tweets_dim_step manual__2023-01-05T10:56:03.364986+00:00 [queued]>
+[2023-01-05T12:04:41.984+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: atn_update_datalake.check_put_tickers_tweets_dim_step manual__2023-01-05T10:56:03.364986+00:00 [queued]>
+[2023-01-05T12:04:41.984+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-05T12:04:41.984+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 3
+[2023-01-05T12:04:41.984+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-05T12:04:42.000+0000] {taskinstance.py:1389} INFO - Executing <Task(EmrStepSensor): check_put_tickers_tweets_dim_step> on 2023-01-05 10:56:03.364986+00:00
+[2023-01-05T12:04:42.005+0000] {standard_task_runner.py:52} INFO - Started process 396 to run task
+[2023-01-05T12:04:42.009+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'atn_update_datalake', 'check_put_tickers_tweets_dim_step', 'manual__2023-01-05T10:56:03.364986+00:00', '--job-id', '3801', '--raw', '--subdir', 'DAGS_FOLDER/market_data_analytics/my_dags/datalake_update.py', '--cfg-path', '/tmp/tmpwtcpg1ke', '--error-file', '/tmp/tmp_diu_usf']
+[2023-01-05T12:04:42.009+0000] {standard_task_runner.py:80} INFO - Job 3801: Subtask check_put_tickers_tweets_dim_step
+[2023-01-05T12:04:42.078+0000] {task_command.py:371} INFO - Running <TaskInstance: atn_update_datalake.check_put_tickers_tweets_dim_step manual__2023-01-05T10:56:03.364986+00:00 [running]> on host 370ed6868bc3
+[2023-01-05T12:04:42.180+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=atn
+AIRFLOW_CTX_DAG_ID=atn_update_datalake
+AIRFLOW_CTX_TASK_ID=check_put_tickers_tweets_dim_step
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-05T10:56:03.364986+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-05T10:56:03.364986+00:00
+[2023-01-05T12:04:42.191+0000] {base.py:68} INFO - Using connection ID 'aws_credentials' for task execution.
+[2023-01-05T12:04:42.191+0000] {connection_wrapper.py:210} INFO - AWS Connection (conn_id='aws_credentials', conn_type='aws') credentials retrieved from login and password.
+[2023-01-05T12:04:42.235+0000] {emr.py:443} INFO - Poking step s-1SXOW33WD98XO on cluster j-1Z5DDUK8PTRNA
+[2023-01-05T12:04:43.088+0000] {emr.py:69} INFO - Job flow currently PENDING
+[2023-01-05T12:05:43.149+0000] {emr.py:443} INFO - Poking step s-1SXOW33WD98XO on cluster j-1Z5DDUK8PTRNA
+[2023-01-05T12:05:44.357+0000] {emr.py:69} INFO - Job flow currently RUNNING
+[2023-01-05T12:06:44.414+0000] {emr.py:443} INFO - Poking step s-1SXOW33WD98XO on cluster j-1Z5DDUK8PTRNA
+[2023-01-05T12:06:45.469+0000] {emr.py:69} INFO - Job flow currently RUNNING
+[2023-01-05T12:07:45.499+0000] {emr.py:443} INFO - Poking step s-1SXOW33WD98XO on cluster j-1Z5DDUK8PTRNA
+[2023-01-05T12:07:46.432+0000] {emr.py:69} INFO - Job flow currently RUNNING
+[2023-01-05T13:27:04.197+0000] {local_task_job.py:227} WARNING - State of this instance has been externally set to up_for_retry. Terminating instance.
+[2023-01-05T13:27:04.202+0000] {process_utils.py:129} INFO - Sending Signals.SIGTERM to group 396. PIDs of all processes in the group: [396]
+[2023-01-05T13:27:04.203+0000] {process_utils.py:80} INFO - Sending the signal Signals.SIGTERM to group 396
+[2023-01-05T13:27:04.204+0000] {taskinstance.py:1553} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-01-05T13:27:04.236+0000] {taskinstance.py:1902} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/sensors/base.py", line 299, in execute
+    time.sleep(self._get_next_poke_interval(started_at, run_duration, try_number))
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1555, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2023-01-05T13:27:04.253+0000] {taskinstance.py:1412} INFO - Marking task as UP_FOR_RETRY. dag_id=atn_update_datalake, task_id=check_put_tickers_tweets_dim_step, execution_date=20230105T105603, start_date=20230105T120441, end_date=20230105T132704
+[2023-01-05T13:27:04.281+0000] {standard_task_runner.py:97} ERROR - Failed to execute job 3801 for task check_put_tickers_tweets_dim_step (Task received SIGTERM signal; 396)
+[2023-01-05T13:27:04.300+0000] {process_utils.py:75} INFO - Process psutil.Process(pid=396, status='terminated', exitcode=1, started='12:04:41') (396) terminated with exit code 1

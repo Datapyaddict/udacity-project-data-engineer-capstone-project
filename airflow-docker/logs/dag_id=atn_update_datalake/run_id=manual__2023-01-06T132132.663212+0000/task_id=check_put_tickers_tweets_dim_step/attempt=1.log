@@ -1,0 +1,41 @@
+[2023-01-06T14:30:58.999+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: atn_update_datalake.check_put_tickers_tweets_dim_step manual__2023-01-06T13:21:32.663212+00:00 [queued]>
+[2023-01-06T14:30:59.014+0000] {taskinstance.py:1171} INFO - Dependencies all met for <TaskInstance: atn_update_datalake.check_put_tickers_tweets_dim_step manual__2023-01-06T13:21:32.663212+00:00 [queued]>
+[2023-01-06T14:30:59.015+0000] {taskinstance.py:1368} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-06T14:30:59.015+0000] {taskinstance.py:1369} INFO - Starting attempt 1 of 3
+[2023-01-06T14:30:59.015+0000] {taskinstance.py:1370} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-06T14:30:59.027+0000] {taskinstance.py:1389} INFO - Executing <Task(EmrStepSensor): check_put_tickers_tweets_dim_step> on 2023-01-06 13:21:32.663212+00:00
+[2023-01-06T14:30:59.033+0000] {standard_task_runner.py:52} INFO - Started process 443 to run task
+[2023-01-06T14:30:59.036+0000] {standard_task_runner.py:79} INFO - Running: ['***', 'tasks', 'run', 'atn_update_datalake', 'check_put_tickers_tweets_dim_step', 'manual__2023-01-06T13:21:32.663212+00:00', '--job-id', '3951', '--raw', '--subdir', 'DAGS_FOLDER/market_data_analytics/my_dags/datalake_update.py', '--cfg-path', '/tmp/tmp74nt38zs', '--error-file', '/tmp/tmpfni7aclt']
+[2023-01-06T14:30:59.036+0000] {standard_task_runner.py:80} INFO - Job 3951: Subtask check_put_tickers_tweets_dim_step
+[2023-01-06T14:30:59.102+0000] {task_command.py:371} INFO - Running <TaskInstance: atn_update_datalake.check_put_tickers_tweets_dim_step manual__2023-01-06T13:21:32.663212+00:00 [running]> on host 370ed6868bc3
+[2023-01-06T14:30:59.284+0000] {taskinstance.py:1583} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=atn
+AIRFLOW_CTX_DAG_ID=atn_update_datalake
+AIRFLOW_CTX_TASK_ID=check_put_tickers_tweets_dim_step
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-06T13:21:32.663212+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-06T13:21:32.663212+00:00
+[2023-01-06T14:30:59.295+0000] {base.py:68} INFO - Using connection ID 'aws_credentials' for task execution.
+[2023-01-06T14:30:59.296+0000] {connection_wrapper.py:210} INFO - AWS Connection (conn_id='aws_credentials', conn_type='aws') credentials retrieved from login and password.
+[2023-01-06T14:30:59.333+0000] {emr.py:443} INFO - Poking step s-2KAS82T0J66V8 on cluster j-3G7PO8Y3OE3BT
+[2023-01-06T14:31:01.161+0000] {emr.py:69} INFO - Job flow currently PENDING
+[2023-01-06T14:32:01.221+0000] {emr.py:443} INFO - Poking step s-2KAS82T0J66V8 on cluster j-3G7PO8Y3OE3BT
+[2023-01-06T14:32:02.492+0000] {emr.py:69} INFO - Job flow currently RUNNING
+[2023-01-06T14:33:02.523+0000] {emr.py:443} INFO - Poking step s-2KAS82T0J66V8 on cluster j-3G7PO8Y3OE3BT
+[2023-01-06T14:33:04.273+0000] {emr.py:69} INFO - Job flow currently RUNNING
+[2023-01-06T14:34:04.334+0000] {emr.py:443} INFO - Poking step s-2KAS82T0J66V8 on cluster j-3G7PO8Y3OE3BT
+[2023-01-06T14:34:06.130+0000] {emr.py:69} INFO - Job flow currently RUNNING
+[2023-01-06T14:35:06.184+0000] {emr.py:443} INFO - Poking step s-2KAS82T0J66V8 on cluster j-3G7PO8Y3OE3BT
+[2023-01-06T14:35:07.456+0000] {emr.py:69} INFO - Job flow currently RUNNING
+[2023-01-06T14:36:07.517+0000] {emr.py:443} INFO - Poking step s-2KAS82T0J66V8 on cluster j-3G7PO8Y3OE3BT
+[2023-01-06T14:36:09.009+0000] {emr.py:69} INFO - Job flow currently RUNNING
+[2023-01-06T14:37:09.044+0000] {emr.py:443} INFO - Poking step s-2KAS82T0J66V8 on cluster j-3G7PO8Y3OE3BT
+[2023-01-06T14:37:10.271+0000] {emr.py:69} INFO - Job flow currently RUNNING
+[2023-01-06T14:38:10.322+0000] {emr.py:443} INFO - Poking step s-2KAS82T0J66V8 on cluster j-3G7PO8Y3OE3BT
+[2023-01-06T14:38:14.779+0000] {emr.py:69} INFO - Job flow currently COMPLETED
+[2023-01-06T14:38:14.779+0000] {base.py:301} INFO - Success criteria met. Exiting.
+[2023-01-06T14:38:14.836+0000] {taskinstance.py:1412} INFO - Marking task as SUCCESS. dag_id=atn_update_datalake, task_id=check_put_tickers_tweets_dim_step, execution_date=20230106T132132, start_date=20230106T143059, end_date=20230106T143814
+[2023-01-06T14:38:14.906+0000] {local_task_job.py:156} INFO - Task exited with return code 0
+[2023-01-06T14:38:14.945+0000] {local_task_job.py:279} INFO - 1 downstream tasks scheduled from follow-on schedule check

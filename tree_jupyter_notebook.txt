@@ -1,0 +1,6 @@
+jupyter-pyspark-docker
+├── pyspark_work
+│   ├── constituents.csv
+│   ├── dl_config.cfg
+│   └── financial_tweets_analysis.ipynb
+
